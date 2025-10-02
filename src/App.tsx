@@ -20,7 +20,7 @@ function App() {
 
   const TOTAL_VACANCIES = 10;
   const REMAINING_VACANCIES = 7;
-  const REGISTRATION_DEADLINE = new Date('2025-10-24T23:59:59');
+  const REGISTRATION_DEADLINE = new Date('2025-10-17T23:59:59');
 
   const scrollToForm = () => {
     formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
