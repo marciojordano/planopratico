@@ -68,8 +68,9 @@ function App() {
 
   const handlePhoneSubmit = () => {
     return {
-      ...formData,
-      phone: `${formData.countryCode} ${formData.phone}`
+      name: formData.name,
+      phone: `${formData.countryCode} ${formData.phone}`,
+      email: formData.email
     };
   };
 
