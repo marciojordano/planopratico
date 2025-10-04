@@ -29,6 +29,30 @@ function App() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
+
+    // Validação dos campos
+    if (!formData.name.trim()) {
+      setError('Por favor, preencha seu nome.');
+      return;
+    }
+
+    if (!formData.phone.trim()) {
+      setError('Por favor, preencha seu telefone.');
+      return;
+    }
+
+    if (!formData.email.trim()) {
+      setError('Por favor, preencha seu e-mail.');
+      return;
+    }
+
+    // Validação básica de e-mail
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setError('Por favor, insira um e-mail válido.');
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
